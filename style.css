@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: #f4f4f4;
+  color: #333;
+}
+header {
+  background-color: #212121;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.nav {
+  display: flex;
+  gap: 15px;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 8px 12px;
+  transition: background 0.3s, color 0.3s;
+}
+.nav a:hover {
+  background: gray;
+  border-radius: 5px;
+  color: #fff;
+}
+.nav a:active {
+  transform: scale(0.95);
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #212121;
+  width: 100%;
+}
+.menu a {
+  color: #fff;
+  padding: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+  text-align: center;
+}
+.menu a:hover {
+  background-color: #ff5722;
+}
+/* Медиа-запросы для адаптации */
+@media (max-width: 768px) {
+  .nav {
+      display: none;
+  }
+  .burger {
+      display: flex;
+  }
+  .menu.show {
+      display: flex;
+  }
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.product {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,  0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product img {
+  border-radius: 10px;
+}
+.product h3 {
+  margin: 10px 0;
+}
+.product button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  background: green;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.product button:hover {
+  background: gray;
+}
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
